@@ -29,15 +29,16 @@ int[,] ChangeLines(int[,] array)
     return array;
 }
 
-void PrintArray(int [,] array){
-for (int i = 0; i < array.GetLength(0); i++)
+void PrintArray(int[,] array)
 {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.Write($"{ array[i, j] } ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]} ");
+        }
+        System.Console.WriteLine();
     }
-    System.Console.WriteLine();
-}
 }
 
 int[,] array = GetArray(5, 6);

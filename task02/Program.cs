@@ -23,44 +23,43 @@ int[,] GetArray(int m, int n)
 void EnterOfElements(int[,] array)
 {
     int temp1 = 0;
-    int count=0;
+    int count = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
             temp1 = array[i, j];
-                for (int k = 0; k < array.GetLength(0); k++)
+            for (int k = 0; k < array.GetLength(0); k++)
             {
                 for (int m = 0; m < array.GetLength(1); m++)
                 {
-                    if (temp1 == array[k,m])
+                    if (temp1 == array[k, m])
                     {
-                    count++;
+                        count++;
                     }
 
                 }
             }
 
-            Console.WriteLine($"Элемент {i}, {j} = {array[i,j]} входит в массив {count} раз");
+            Console.WriteLine($"Элемент {i}, {j} = {array[i, j]} входит в массив {count} раз");
             count = 0;
         }
     }
 }
 
-    void PrintArray(int[,] array)
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-                Console.Write($"{array[i, j]} ");
-            }
-            System.Console.WriteLine();
+            Console.Write($"{array[i, j]} ");
         }
+        System.Console.WriteLine();
     }
+}
 
-    int[,] array = GetArray(5, 6);
-    PrintArray(array);
-    Console.WriteLine();
-    EnterOfElements(array);
- 
+int[,] array = GetArray(5, 6);
+PrintArray(array);
+Console.WriteLine();
+EnterOfElements(array);

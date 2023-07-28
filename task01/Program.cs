@@ -19,14 +19,14 @@ int[,] GetArray(int m, int n)
 
 int[,] Change(int[,] array)
 {
-int[,] result = new int[array.GetLength(1), array.GetLength(0)];
-    for(int i = 0; i < array.GetLength(0); i++)
+    int[,] result = new int[array.GetLength(1), array.GetLength(0)];
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for(int j=0; j< array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-        result[j, i] = array[i, j];
+            result[j, i] = array[i, j];
         }
-    }  
+    }
     return result;
 }
 
